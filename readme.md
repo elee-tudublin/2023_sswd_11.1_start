@@ -80,7 +80,8 @@ These include names, descriptions, etc.
 *  The column state in `table_sort`  is changed.
 * JavaScript `array sort` is used to sort asc. or desc.
 
-Add this function to the page. 
+Add this function to the page.
+For use of the JS ternery operator see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator
 
 ```javascript
 	// Sort alpha values in a given column
@@ -94,13 +95,15 @@ Add this function to the page.
 
 		// sort the products array based on column selected
 		// sort takes a function parameter to indicate which column should be sorted
+		// For JS ternery operator see:
+		// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator
 		$filtered = $filtered.sort((a, b) => {
 			// sort asc
 			if (table_sort[col] === true) {
-				return a[col].toLowerCase() < b[col].toLowerCase();
+				return a[col].toLowerCase() < b[col].toLowerCase() ? -1 : 1;
 				// sort desc
 			} else {
-				return a[col].toLowerCase() > b[col].toLowerCase();
+				return a[col].toLowerCase() > b[col].toLowerCase() ? -1 : 1;
 			}
 		});
 	};
