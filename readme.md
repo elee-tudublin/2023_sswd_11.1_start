@@ -151,7 +151,7 @@ The functions should be called when one of the table headers is clicked, e.g. **
 
 1. Make the id, name, description, shared, and favourite colums sortable.
 1. Add suitable sort icons from [Bootstrap Icons](https://icons.getbootstrap.com/).
-1. Use a function to change the icon in order to show the correct sort direction.
+1. Use a function or if statement, etc. to change the icon in order to show the correct sort direction.
 
 
 
